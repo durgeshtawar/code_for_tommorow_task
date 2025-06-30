@@ -1,6 +1,10 @@
 import mongoose from "mongoose";
 
 const priceOptionSchema =new  mongoose.Schema({
+    serviceId:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"Service"
+    },
     duration:{
         type:String,
         required:true
